@@ -1,18 +1,18 @@
 require 'nvim-treesitter.configs'.setup {
 
     ensure_installed = {
-        "lua",
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "json",
-        "yaml",
-        "xml",
-        "sql",
-        "svelte",
-        "markdown"
+        'lua',
+        'html',
+        'css',
+        'javascript',
+        'typescript',
+        'tsx',
+        'json',
+        'yaml',
+        'xml',
+        'sql',
+        'svelte',
+        'markdown'
     },
 
     sync_install = false,

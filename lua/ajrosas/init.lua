@@ -1,3 +1,3 @@
-require("ajrosas.set")
-require("ajrosas.remap")
-require("ajrosas.lazy")
+require('ajrosas.set')
+require('ajrosas.remap')
+require('ajrosas.lazy')

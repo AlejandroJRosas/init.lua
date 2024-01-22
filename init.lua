@@ -1,2 +1,2 @@
-require("ajrosas")
-print("Welcome AJRosas!")
+require('ajrosas')
+print('Welcome AJRosas!')
