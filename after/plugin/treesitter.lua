@@ -12,7 +12,7 @@ require 'nvim-treesitter.configs'.setup {
         "xml",
         "sql",
         "svelte",
-
+        "markdown"
     },
 
     sync_install = false,
