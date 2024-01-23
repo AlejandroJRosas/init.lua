@@ -33,9 +33,13 @@ return {
       'rafamadriz/friendly-snippets',
     }
   },
-  'fedepujol/bracketpair.nvim',
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    dependencies = {
+      'HiPhish/rainbow-delimiters.nvim'
+    }
+  },
   'alvan/vim-closetag',
   'tpope/vim-surround',
   'andweeb/presence.nvim',
 }
-
