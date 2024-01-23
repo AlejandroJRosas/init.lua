@@ -1,7 +1,0 @@
--- require 'closetag'.setup {
---   filenames = '*.html,*.xhtml,*.phtml,*.svelte',
---   emptyTags_caseSensitive = 1,
---   shortcut = '>',
---   close_shortcut = '<leader>>'
--- }
--- 

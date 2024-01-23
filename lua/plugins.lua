@@ -1,21 +1,24 @@
 return {
+
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
+
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate'
   },
+
   {
     'navarasu/onedark.nvim',
     config = function()
       vim.cmd('colorscheme onedark')
     end
   },
-  'theprimeagen/harpoon',
-  'tpope/vim-fugitive',
+
+
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
@@ -33,13 +36,28 @@ return {
       'rafamadriz/friendly-snippets',
     }
   },
+
   {
     'lukas-reineke/indent-blankline.nvim',
     dependencies = {
       'HiPhish/rainbow-delimiters.nvim'
     }
   },
-  'alvan/vim-closetag',
+
+  'theprimeagen/harpoon',
+
+  'mbbill/undotree',
+
+  'tpope/vim-fugitive',
+
+  {
+    'numToStr/Comment.nvim',
+    lazy = false,
+  },
+
+  'windwp/nvim-ts-autotag',
+
   'tpope/vim-surround',
+
   'andweeb/presence.nvim',
 }
