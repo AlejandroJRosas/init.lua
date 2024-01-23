@@ -55,9 +55,31 @@ return {
     lazy = false,
   },
 
+  {
+    'kevinhwang91/nvim-fundo',
+    dependencies = {
+      'kevinhwang91/promise-async',
+    },
+    build = function() require('fundo').install() end,
+  },
+
+  {
+    'laytan/tailwind-sorter.nvim',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-lua/plenary.nvim'
+    },
+    build = 'cd formatter && npm i && npm run build',
+    config = true,
+  },
+
+  'norcalli/nvim-colorizer.lua',
+
   'windwp/nvim-ts-autotag',
 
   'tpope/vim-surround',
 
   'andweeb/presence.nvim',
+
 }
+
