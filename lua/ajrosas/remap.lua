@@ -50,6 +50,8 @@ vim.keymap.set('n', '<leader><leader>', function()
 end)
 
 -- Git Remappings
+vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
 vim.keymap.set('n', '<F9>', ':G add .<CR>')
 vim.keymap.set('n', '<F10>', ":G commit -m ''<left>")
 vim.keymap.set('n', '<F12>', ':G push<CR>')
+
