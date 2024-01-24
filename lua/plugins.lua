@@ -81,5 +81,6 @@ return {
 
   'andweeb/presence.nvim',
 
+  'ThePrimeagen/vim-be-good'
 }
 

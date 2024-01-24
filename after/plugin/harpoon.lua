@@ -4,7 +4,7 @@ require 'harpoon'.setup {
   },
 
   -- sets the marks upon calling `toggle` on the ui, instead of require `:w`.
-  save_on_toggle = false,
+  save_on_toggle = true,
 
   -- saves the harpoon file upon every change. disabling is unrecommended.
   save_on_change = true,
@@ -30,7 +30,6 @@ require 'harpoon'.setup {
 local mark = require('harpoon.mark')
 local ui = require('harpoon.ui')
 
-
 vim.keymap.set('n', '<leader>a', mark.add_file)
 vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
 vim.keymap.set('n', '<F1>', function() ui.nav_file(1) end)
@@ -43,8 +42,8 @@ vim.keymap.set('n', '<F7>', function() ui.nav_file(7) end)
 vim.keymap.set('n', '<F8>', function() ui.nav_file(8) end)
 
 vim.cmd('highlight! HarpoonInactive guibg=NONE guifg=#63698c')
-vim.cmd('highlight! HarpoonActive guibg=NONE guifg=white')
-vim.cmd('highlight! HarpoonNumberActive guibg=NONE guifg=#7aa2f7')
-vim.cmd('highlight! HarpoonNumberInactive guibg=NONE guifg=#7aa2f7')
+vim.cmd('highlight! HarpoonActive guibg=NONE guifg=#63ff8c')
+vim.cmd('highlight! HarpoonNumberActive guibg=NONE guifg=#00f5ff')
+vim.cmd('highlight! HarpoonNumberInactive guibg=NONE guifg=#7a99f7')
 vim.cmd('highlight! TabLineFill guibg=NONE guifg=white')
 

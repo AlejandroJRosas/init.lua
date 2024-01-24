@@ -1,21 +1,16 @@
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+vim.keymap.set('n', '<A-j>', "V:m '>+1<CR>gv=gv<Esc>")
+vim.keymap.set('n', '<A-k>', "V:m '<-2<CR>gv=gv<Esc>")
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv")
 
 vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
-
-vim.keymap.set('n', '<leader>vwm', function()
-	require('vim-with-me').StartVimWithMe()
-end)
-vim.keymap.set('n', '<leader>svwm', function()
-	require('vim-with-me').StopVimWithMe()
-end)
 
 -- greatest remap ever
 vim.keymap.set('x', '<leader>p', [['_dP]])
@@ -50,7 +45,8 @@ end)
 
 -- Git Remappings
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
-vim.keymap.set('n', '<F9>', ':G add .<CR>')
-vim.keymap.set('n', '<F10>', ":G commit -m ''<left>")
+vim.keymap.set('n', '<F9>', ':G pull<CR>')
+vim.keymap.set('n', '<F10>', ':G add .<CR>')
+vim.keymap.set('n', '<A-f>', ":G commit -m ''<left>")
 vim.keymap.set('n', '<F12>', ':G push<CR>')
 
