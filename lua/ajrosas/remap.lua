@@ -50,3 +50,4 @@ vim.keymap.set('n', '<F10>', ':G add .<CR>')
 vim.keymap.set('n', '<A-f>', ":G commit -m ''<left>")
 vim.keymap.set('n', '<F12>', ':G push<CR>')
 
+vim.keymap.set('n', '+', ':lua ColorMyHarpoon()<CR>')

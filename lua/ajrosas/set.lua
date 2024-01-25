@@ -28,3 +28,9 @@ vim.opt.colorcolumn = '80'
 
 vim.g.mapleader = ' '
 
+vim.cmd('highlight! HarpoonInactive guibg=NONE guifg=#63698c')
+vim.cmd('highlight! HarpoonActive guibg=NONE guifg=#63ff8c')
+vim.cmd('highlight! HarpoonNumberActive guibg=NONE guifg=#00f5ff')
+vim.cmd('highlight! HarpoonNumberInactive guibg=NONE guifg=#7a99f7')
+vim.cmd('highlight! TabLineFill guibg=NONE guifg=white')
+

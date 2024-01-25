@@ -25,7 +25,18 @@ require 'harpoon'.setup {
   tabline = true,
   tabline_prefix = "   ",
   tabline_suffix = "   ",
+
 }
+
+function ColorMyHarpoon()
+  vim.api.nvim_set_hl(0, 'HarpoonInactive', { bg='none', fg='#63698c' })
+  vim.api.nvim_set_hl(0, 'HarpoonActive', { bg='none', fg='#63ff8c' })
+  vim.api.nvim_set_hl(0, 'HarpoonNumberActive', { bg='none', fg='#00f5ff' })
+  vim.api.nvim_set_hl(0, 'HarpoonNumberInactive', { bg='none', fg='#7a99f7' })
+  vim.api.nvim_set_hl(0, 'TabLineFill', { bg='none', fg='white' })
+end
+
+ColorMyHarpoon()
 
 local mark = require('harpoon.mark')
 local ui = require('harpoon.ui')
@@ -41,9 +52,4 @@ vim.keymap.set('n', '<F6>', function() ui.nav_file(6) end)
 vim.keymap.set('n', '<F7>', function() ui.nav_file(7) end)
 vim.keymap.set('n', '<F8>', function() ui.nav_file(8) end)
 
-vim.cmd('highlight! HarpoonInactive guibg=NONE guifg=#63698c')
-vim.cmd('highlight! HarpoonActive guibg=NONE guifg=#63ff8c')
-vim.cmd('highlight! HarpoonNumberActive guibg=NONE guifg=#00f5ff')
-vim.cmd('highlight! HarpoonNumberInactive guibg=NONE guifg=#7a99f7')
-vim.cmd('highlight! TabLineFill guibg=NONE guifg=white')
 
