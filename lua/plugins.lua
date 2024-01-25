@@ -73,6 +73,16 @@ return {
     config = true,
   },
 
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && npm install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+
   'norcalli/nvim-colorizer.lua',
 
   'windwp/nvim-ts-autotag',
@@ -81,5 +91,10 @@ return {
 
   'andweeb/presence.nvim',
 
-  'ThePrimeagen/vim-be-good'
+  'ThePrimeagen/vim-be-good',
+
+  'f-person/git-blame.nvim',
+
+  'nvim-lualine/lualine.nvim',
+
 }
