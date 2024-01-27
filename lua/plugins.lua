@@ -97,4 +97,6 @@ return {
 
   'nvim-lualine/lualine.nvim',
 
+  'prichrd/netrw.nvim',
+  'nvim-tree/nvim-web-devicons',
 }
