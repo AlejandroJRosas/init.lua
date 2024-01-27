@@ -34,3 +34,5 @@ vim.cmd('highlight! HarpoonNumberActive guibg=NONE guifg=#00f5ff')
 vim.cmd('highlight! HarpoonNumberInactive guibg=NONE guifg=#7a99f7')
 vim.cmd('highlight! TabLineFill guibg=NONE guifg=white')
 
+vim.g.gitblame_date_format = '%r | %x • %I:%M %p'
+
