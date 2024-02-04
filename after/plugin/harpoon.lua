@@ -1,4 +1,4 @@
-require 'harpoon'.setup {
+require 'harpoon'.setup ({
   menu = {
     width = vim.api.nvim_win_get_width(0) - 7,
   },
@@ -26,7 +26,7 @@ require 'harpoon'.setup {
   tabline_prefix = "   ",
   tabline_suffix = "   ",
 
-}
+})
 
 function ColorMyHarpoon()
   vim.api.nvim_set_hl(0, 'HarpoonInactive', { bg='none', fg='#63698c' })

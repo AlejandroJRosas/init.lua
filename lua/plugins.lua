@@ -99,4 +99,18 @@ return {
 
   'prichrd/netrw.nvim',
   'nvim-tree/nvim-web-devicons',
+
+  {
+    'zbirenbaum/copilot.lua',
+    dependencies = {
+      'AndreM222/copilot-lualine'
+    },
+  },
+
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  },
 }
