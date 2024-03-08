@@ -1,53 +1,64 @@
 vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
-vim.keymap.set('n', '<A-j>', "V:m '>+1<CR>gv=gv<Esc>")
-vim.keymap.set('n', '<A-k>', "V:m '<-2<CR>gv=gv<Esc>")
-vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv")
+local bind = vim.keymap.set
 
-vim.keymap.set('n', 'J', 'mzJ`z')
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-vim.keymap.set('n', 'n', 'nzzzv')
-vim.keymap.set('n', 'N', 'Nzzzv')
+bind('n', '<leader>pv', vim.cmd.Ex)
+
+bind('n', '<A-j>', "V:m '>+1<CR>gv=gv<Esc>")
+bind('n', '<A-k>', "V:m '<-2<CR>gv=gv<Esc>")
+bind('v', '<A-j>', ":m '>+1<CR>gv=gv")
+bind('v', '<A-k>', ":m '<-2<CR>gv=gv")
+
+bind('n', 'J', 'mzJ`z')
+bind('n', '<C-d>', '<C-d>zz')
+bind('n', '<C-u>', '<C-u>zz')
+bind('n', 'n', 'nzzzv')
+bind('n', 'N', 'Nzzzv')
 
 -- greatest remap ever
-vim.keymap.set('x', '<leader>p', [['_dP]])
+bind('x', '<leader>p', [['_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({ 'n', 'v' }, '<leader>y', [['+y]])
-vim.keymap.set('n', '<leader>Y', [['+Y]])
+bind({ 'n', 'v' }, '<leader>y', [['+y]])
+bind('n', '<leader>Y', [['+Y]])
 
-vim.keymap.set({ 'n', 'v' }, '<leader>d', [['_d]])
+bind({ 'n', 'v' }, '<leader>d', [['_d]])
 
 -- This is going to get me cancelled
-vim.keymap.set('i', '<C-c>', '<Esc>')
+bind('i', '<C-c>', '<Esc>')
 
-vim.keymap.set('n', 'Q', '<nop>')
-vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
-vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
+bind('n', 'Q', '<nop>')
+bind('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
+bind('n', '<leader>f', vim.lsp.buf.format)
 
-vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
-vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
-vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
-vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
+bind('n', '<C-k>', '<cmd>cnext<CR>zz')
+bind('n', '<C-j>', '<cmd>cprev<CR>zz')
+bind('n', '<leader>k', '<cmd>lnext<CR>zz')
+bind('n', '<leader>j', '<cmd>lprev<CR>zz')
 
-vim.keymap.set('n', '<leader>r', [[:%s///g<Left><Left><Left>]])
-vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+bind('n', '<leader>r', [[:%s///g<Left><Left><Left>]])
+bind('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.keymap.set('n', '<leader>vpp', '<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>');
-vim.keymap.set('n', '<leader>mr', '<cmd>CellularAutomaton make_it_rain<CR>');
-
-vim.keymap.set('n', '<leader><leader>', function()
+bind('n', '<leader><leader>', function()
 	vim.cmd('so')
 end)
 
 -- Git Remappings
-vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
-vim.keymap.set('n', '<F9>', ':G pull<CR>')
-vim.keymap.set('n', '<F10>', ':G add .<CR>')
-vim.keymap.set('n', '<A-f>', ":G commit -m ''<left>")
-vim.keymap.set('n', '<F12>', ':G push<CR>')
+bind('n', '<leader>gs', vim.cmd.Git)
+bind('n', '<F9>', ':G pull<CR>')
+bind('n', '<F10>', ':G add .<CR>')
+bind('n', '<A-f>', ":G commit -m ''<left>")
+bind('n', '<F12>', ':G push<CR>')
 
-vim.keymap.set('n', '+', ':lua ColorMyHarpoon()<CR>')
+-- local function netrw_mapping()
+--   vim.keymap.del('n', '<F1>', {buffer = true, remap = true})
+-- end
+--
+-- local user_cmds = vim.api.nvim_create_augroup('user_cmds', {clear = true})
+-- vim.api.nvim_create_autocmd('filetype', {
+--   pattern = 'netrw',
+--   group = user_cmds,
+--   desc = 'Keybindings for netrw',
+--   callback = netrw_mapping
+-- })
+

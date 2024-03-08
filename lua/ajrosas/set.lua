@@ -1,39 +1,31 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true
+local set = vim.opt
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
+set.nu = true
+set.relativenumber = true
 
-vim.opt.smartindent = true
+set.tabstop = 2
+set.softtabstop = 2
+set.shiftwidth = 2
+set.expandtab = true
 
-vim.opt.wrap = true
-vim.opt.linebreak = true
+set.smartindent = true
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undofile = true
+set.wrap = true
+set.linebreak = true
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+set.swapfile = false
+set.backup = false
+set.undofile = true
 
-vim.opt.termguicolors = true
+set.hlsearch = false
+set.incsearch = true
 
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = 'yes'
+set.termguicolors = true
 
-vim.opt.updatetime = 50
+set.scrolloff = 8
+set.signcolumn = 'yes'
 
-vim.opt.colorcolumn = '80'
+set.updatetime = 50
 
-vim.g.mapleader = ' '
-
-vim.cmd('highlight! HarpoonInactive guibg=NONE guifg=#63698c')
-vim.cmd('highlight! HarpoonActive guibg=NONE guifg=#63ff8c')
-vim.cmd('highlight! HarpoonNumberActive guibg=NONE guifg=#00f5ff')
-vim.cmd('highlight! HarpoonNumberInactive guibg=NONE guifg=#7a99f7')
-vim.cmd('highlight! TabLineFill guibg=NONE guifg=white')
-
-vim.g.gitblame_date_format = '%r | %x • %I:%M %p'
+set.colorcolumn = '80'
 
